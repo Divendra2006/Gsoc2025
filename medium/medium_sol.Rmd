@@ -1,0 +1,59 @@
+---
+title: "medium_sol"
+output: html_document
+---
+
+## Introduction
+
+This document demonstrates a Shiny app that uses the `detourr` package to create interactive 2D scatter plots of the `flea` dataset. The app displays two different tour paths: one using the `grand_tour` and the other using the `little_tour`.
+
+## Shiny App Code
+
+Below is the Shiny app code that creates two interactive scatter plots.
+
+```{r, echo=TRUE}
+library(shiny)
+library(detourr)
+library(crosstalk)
+library(tourr)
+library(htmltools)
+
+data(flea, package = "tourr")
+
+ui <- fluidPage(
+  bscols(
+    displayScatter2dOutput("tour1"), 
+    displayScatter2dOutput("tour2")   
+  )
+)
+
+server <- function(input, output) {
+  shared_flea <- SharedData$new(flea)
+  
+  output$tour1 <- shinyRenderDisplayScatter2d({
+    detour(shared_flea, tour_aes(projection = -species, colour = species)) |>
+      tour_path(grand_tour(2), fps = 60) |>  
+      show_scatter(alpha = 0.7, axes = FALSE)
+  })
+  
+  output$tour2 <- shinyRenderDisplayScatter2d({
+    detour(shared_flea, tour_aes(projection = -species, colour = species)) |>
+      tour_path(little_tour(2), fps = 60) |>  
+      show_scatter(alpha = 0.7, axes = FALSE)
+  })
+}
+
+shinyApp(ui = ui, server = server)
+```
+
+## Demonstration of Linking Brush
+
+Below is a GIF demonstrating how the linking brush works. When points are selected in one tour, the corresponding points are highlighted in the other tour.
+
+```{r}
+knitr::include_graphics("/home/yadav/GsocTest/medium/assets/demo.gif")
+```
+
+## Conclusion
+
+This Shiny app provides an interactive way to explore the flea dataset using different tour paths. The linking brush allows users to highlight points in one tour and see the corresponding points in another tour, providing a powerful way to explore relationships in the data.
