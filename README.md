@@ -44,9 +44,15 @@ This Shiny app visualizes the Palmer Penguins dataset using t-SNE (t-Distributed
           - Points are colored by species (Adelie, Chinstrap, or Gentoo) to highlight clusters.
 
   **1. t-SNE with Perplexity = 30**
-  - **Clusters** :  Tight, distinct clusters with some overlap.
+  - **Features** :bill length, bill depth, flipper length, body mass  .
+  - 
+      ![perplexity_30](https://github.com/user-attachments/assets/27cad7f4-a03b-492d-9196-f266bf9a07df)
+
 
    **2. t-SNE with Perplexity = 45**
-  - **Clusters**: Broader clusters with more overlap.
+  - **Features**:bill length, bill depth .
+  - 
+      ![perplexity_45](https://github.com/user-attachments/assets/ef8ef32f-a8e9-449d-8a56-50c853a531c3)
+
  
 ---
