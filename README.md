@@ -1,5 +1,5 @@
 # **Interactive Visualization**
-
+---
 ## **Easy Solution**
 
 ### **Overview**
@@ -10,7 +10,8 @@
 - **Dimensionality Reduction** : t-SNE to analyze data
 - **Interactive Visualization** : Linked brushing to understand cluster structures and possible distortions.
 
-
+---
+---
 ## **Medium Solution**
 
 ### **Overview**
@@ -26,3 +27,4 @@
 We display two different 2D projections of the dataset using **grand tour** and **little tour** techniques.
 
 [Watch the video](medium/assets/demo.gif)
+---
