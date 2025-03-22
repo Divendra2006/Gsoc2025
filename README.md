@@ -43,4 +43,10 @@ This Shiny app visualizes the Palmer Penguins dataset using t-SNE (t-Distributed
           - The t-SNE plot updates automatically when the perplexity or feature selection changes.
           - Points are colored by species (Adelie, Chinstrap, or Gentoo) to highlight clusters.
 
+  **1. t-SNE with Perplexity = 30**
+  - **Clusters** :  Tight, distinct clusters with some overlap.
+
+   **2. t-SNE with Perplexity = 45**
+  - **Clusters**: Broader clusters with more overlap.
+ 
 ---
