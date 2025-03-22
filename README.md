@@ -28,3 +28,18 @@ We display two different 2D projections of the dataset using **grand tour** and 
 
 [Watch the video](medium/assets/demo.gif)
 ---
+---
+## **Hard Solution**
+
+### **Overview**
+This Shiny app visualizes the Palmer Penguins dataset using t-SNE (t-Distributed Stochastic Neighbor Embedding).The app allows users to interactively explore the dataset by adjusting the perplexity parameter and selecting which features to include in the analysis. Each point in the t-SNE plot represents a penguin, colored by species, and the plot helps reveal clusters of similar penguins based on the selected features.
+
+### **Key Features**
+- **Controls** : 
+          - Adjust the perplexity parameter of t-SNE.
+          - Select which features (e.g., bill length, bill depth, flipper length, body mass) to include in 
+            the analysis.
+- **Visualization** :
+          - The t-SNE plot updates automatically when the perplexity or feature selection changes.
+          - Points are colored by species (Adelie, Chinstrap, or Gentoo) to highlight clusters.
+
